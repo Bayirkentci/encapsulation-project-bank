@@ -5,6 +5,9 @@ public class SavingsAccount extends BankAccount {
     }
     @Override
     public void calculateInterest() {
-        //
+        double interest = balance * interestRate;
+        this.deposit(interest);
+        System.out.println(String.format("%s %.2f %s","Your account is a saving account and",
+                interest, "has been added to yout account"));
     }
 }
